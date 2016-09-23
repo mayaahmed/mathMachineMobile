@@ -1,21 +1,21 @@
 canvas{
+position: absolute;
 background: khaki;
 opacity:0.7;
-height:300px;
-width:300px;
+height:200px;
+width:200px;
 margin-left: 10px;
+z-index:-1;
 }
 
 
 
 #inputDiv{
 margin-left: 10px;
-width: 290px;
+width: 190px;
 }
 
 
 #topStuff{
-
-   
 	border: none;
 }
