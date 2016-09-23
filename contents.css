@@ -1,0 +1,53 @@
+canvas{
+background: khaki;
+opacity:0.7;
+height:75px;
+width:75px;
+margin-left: 10px;
+}
+
+#flag{
+margin-left: 10px;
+font-size: 12px;
+}
+
+#outputDiv{
+background: khaki;
+margin-top: 10px;
+opacity:0.7;
+width: 100%;
+min-height: 500px;
+
+}
+
+
+#topStuff{
+
+   
+//	border: none;
+}
+
+
+
+ a {
+margin-left: 20px;
+text-align: center;
+color: olive;
+padding-right: 50px;
+padding-top: 25px;
+font: bold 22px Comic Sans MS;
+}
+
+a{
+text-decoration: none;
+color: olive;
+}
+
+
+a:hover{
+font-size: 23px;
+ cursor: pointer;
+
+}
+
+

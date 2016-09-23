@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  Programmer : Maya Ahmed 
+      Files: pascalIndex.html;
+      These file contains the codes for making Pascal Triangle.
+      Date: "Sept 12 2016" 
+    
+
+-->
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Punjiri: Web and Mobile Technologies.</title>
+       
+        <script src="general.js"></script>
+		<link rel="stylesheet" type="text/css" href="general.css">
+        <link rel="stylesheet" type="text/css" href="graycode.css">
+ </head>
+
+	<body>
+		<div id="big_wrapper">
+          <div id="topStuff">
+            <header id="top_header">
+				<p>Math Machine</p>
+                <p id="flag"> Magic Squares </p>  
+			</header>
+			<nav id="top_menu">
+			 <ul>
+
+               
+
+               <li>
+                 <div class="dropdown">
+                   <button onclick="myFunction()" class="dropbtn">Function</button>
+                   <div id="myDropdown" class="dropdown-content">
+                     <a href="index.html">Graphing Calculator</a>
+                     <a href="pascalIndex.html">Pascal's Triangle</a>
+                     <a href="graycodeIndex.html"> Gray Code </a> 
+                     <a href="magicsquareIndex.html"> Magic Square </a> 
+                     <a href="collatzIndex.html">Collatz Sequence </a>
+                     <a href="permutationsIndex.html">Permutations </a>  
+                    
+                   </div>
+                 </div>
+               </li>
+
+               <li>
+                 <div id="myNav" class="overlay">
+                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+                   <div class="overlay-content">
+                     <p> &copy; Punjiri Web and Mobile Technologies, 2016. </p>
+                     <p> Email: maya.ahmed@gmail.com</p>
+                   </div>
+                 </div>
+                 <span style="font-size:30px; cursor:pointer" onclick="openNav()"> &equiv;</span>
+               </li>
+             </ul>
+			</nav>
+          </div>
+
+
+
+<div id="inputDiv">
+  <form name=input>
+     Enter an integer greater than zero
+      <input type=text name=number id="input" value="3">
+     <input id="submitButton" type=button onclick="run()" value="submit">
+  
+    </form>
+</div>
+ 
+
+<div id="outputDiv"></div>  
+
+
+
+
+
+</div> <! end of big wrapper-->
+
+
+
+
+ 
+ <script src="magicsquare.js"></script>
+      
+</body>
+</html>

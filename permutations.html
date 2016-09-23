@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--  
+/* Programmer : Maya Mohsin  Ahmed
+ * File: permutations.html
+ * This file contains the code to generate  all the permutations of the
+ * set {1, ..., n}. 
+ *  Date: "9 July 2016"
+ */
+-->
+
+<html>
+<head>
+
+<script type="text/javascript">
+ 
+function run(){ 
+    var n = parseInt (document.input.number.value);
+	if (isNaN (n))
+	   document.write("Error reading input.");
+     if(n<=0){
+       document.write("Error: Enter an integer greater than zero.");}
+     else{
+        permutations(n);}
+ } //  end of function run().
+
+
+function permutations(n){
+  
+  var permutations  = new Array(1);
+   permutations[0] = new Array(1);
+   permutations[0][0] = 1;
+    var d = factorial(n);
+
+    if(n>1){
+    for(q=1; q<n; q++){
+    permutations = interweaveSet(permutations, q+1);}}
+
+   for(i=0;i<d;i++){
+   for(j=0;j<n;j++){
+       document.write(permutations[i][j]);}
+        document.write("<br/>");}
+   
+}/* end of permutations function */
+
+
+    function factorial(n){
+    var fact = 1;
+    for(i=1; i<n+1; i++)
+      fact = fact * i;
+    return fact;} //end of factorial function
+
+
+
+/*===========interweavevector  =======================
+  This vector  interweaves n  to a  permutation of  size  n-1
+*/
+
+ function interweaveVector(g,  t){
+  var  start = new Array(t);
+   var  current = new Array(t);
+   var result1 = new Array(t);
+
+  for(i=0; i<t; i++)
+    result1[i]=new Array(t);
+    
+    start[t-1] = t;
+    for(i=0; i<t-1; i++)
+        start[i]=g[i];
+    for(i=0; i<t; i++)
+        result1[0][i]=start[i];
+   
+     for(temp=1; temp<t; temp++){
+       for(i=0; i<t-temp-1; i++)
+          current[i]=start[i];
+          current[t-temp-1]=t;
+            for(i=t-temp; i<t; i++)
+               current[i]=start[i-1];
+                for(i=0; i<t; i++)
+                   result1[temp][i]=current[i];  }
+     
+     return result1;} //end of interweaveVector function
+
+
+ function interweaveSet(set,  z){
+  size = factorial(z);
+  size2 = factorial(z-1);
+
+  result = new Array(size);
+  for(i=0; i<size; i++)
+    result[i] = new Array(z);
+  b = new Array(z);
+  for(k=0; k<size2; k++){
+    b= interweaveVector(set[k],  z);
+    m=k*z; 
+    for(j=0; j<z; j++){
+      for(r=0; r<z; r++)
+        result[m+j][r] = b[j][r]; }}
+         return result; 
+ 
+} /* end of function interweaveSet */
+
+
+
+</script>
+</head>
+
+<body>
+<p> <form name=input>
+     <p>Enter an integer greater than zero:</p>
+     <p> <input type=text name=number>
+      <input type=button value="Submit" onClick="run ();"> </p>
+    </form></p>
+
+</body>
+</html>
+
